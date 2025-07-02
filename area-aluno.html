@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área do Aluno - Associação Esportiva A.T.I.T.U.D.E</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function validarLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+      if (user === 'aluno' && pass === '1234') {
+        alert('Login realizado com sucesso! Bem-vindo, ' + user + '!');
+      } else {
+        alert('Usuário ou senha incorretos.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Associação Esportiva A.T.I.T.U.D.E</h1>
+    <p>Esporte, Inclusão e Cidadania</p>
+  </header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="noticias.html">Notícias</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="area-aluno.html">Área do Aluno</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="section">
+    <h2>Área do Aluno</h2>
+    <form onsubmit="validarLogin(event)">
+      <input id="user" type="text" placeholder="Usuário" required />
+      <input id="pass" type="password" placeholder="Senha" required />
+      <input type="submit" value="Entrar" />
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Associação Esportiva A.T.I.T.U.D.E | Siga-nos nas redes sociais</p>
+  </footer>
+</body>
+</html>
